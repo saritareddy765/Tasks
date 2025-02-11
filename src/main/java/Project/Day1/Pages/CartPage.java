@@ -8,23 +8,28 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CartPage {
     SeleniumActions seleniumActions;
-    public CartPage(WebDriver driver){
+
+    public CartPage(WebDriver driver) {
         seleniumActions = new SeleniumActions(driver);
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
-    @FindBy(xpath = "(//*[name()='svg'])[10]") private WebElement viewCartIcon;
-    @FindBy(xpath = "//strong[@class='product-item-name']/a[text()='Breakfast Pot']")
+
+    @FindBy(xpath = "//span[text()='Your Basket']/../span/span")
+    private WebElement cartIcon;
+    @FindBy(xpath = "//strong[@class='product-item-name']/a")
     private WebElement cartProductText;
     @FindBy(xpath = "//p[@class='price-per-unit desktop']/preceding-sibling::span/span/span")
-    private WebElement cartPriceText;
+    private WebElement cartProductPriceText;
 
-    public void viewCart(){
-        seleniumActions.clickOnElement(viewCartIcon);
+   public void clickOnCartIcon() {
+        seleniumActions.clickOnElement(cartIcon);
     }
-    public String getCartProductText(){
+
+    public String getCartProductText() {
         return seleniumActions.getTextMessage(cartProductText);
     }
-    public String getCartProductPrice(){
-        return seleniumActions.getTextMessage(cartPriceText);
+
+    public String getCartProductPrice() {
+        return seleniumActions.getTextMessage(cartProductPriceText);
     }
 }

@@ -2,6 +2,7 @@ package Project.Day1.Automation;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
@@ -18,5 +19,9 @@ public class BasePage {
     @BeforeTest
     public void launchApplication(){
         driver.get("https://www.poundland.co.uk/");
+    }
+    @AfterSuite
+    public void tearDown(){
+        driver.quit();
     }
 }

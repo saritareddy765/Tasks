@@ -9,22 +9,23 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.*;
 
-public class Table {
+public class HandlingWebTables {
     WebDriver driver;
 
     @Test
-    public void getDataColumnUsingFirstName() {
+    public void getRowDataUsingFirstName() {
         driver = new ChromeDriver();
         driver.get("https://www.tutorialspoint.com/selenium/practice/webtables.php");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        List<WebElement> columnData = driver.findElements((By.xpath
-                ("//td[@scope='row' and contains(text(),'Cierra')]/../td[not(a)]")));
+        String firstName = "Cierra";
+        List<WebElement> rowData = driver.findElements((By.xpath
+                ("//td[@scope='row' and contains(text(),'"+firstName+"')]/../td[not(a)]")));
         List<String> testDataTable = new ArrayList<>();
 
-        for (int i = 0; i < columnData.size(); i++) {
-            testDataTable.add(columnData.get(i).getText().trim());
+        for (int i = 0; i < rowData.size(); i++) {
+            testDataTable.add(rowData.get(i).getText().trim());
         }
         System.out.println(testDataTable);
     }

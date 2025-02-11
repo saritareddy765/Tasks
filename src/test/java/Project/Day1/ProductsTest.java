@@ -18,18 +18,18 @@ public class ProductsTest extends BasePage {
     }
     @Test
     public void verifyProductsTest() throws InterruptedException{
-        homePage.cookiesButton();
-        homePage.searchBar();
-        String productItemText = homePage.getProductText();
+        homePage.clickOnAcceptAllCookiesField();
+        homePage.searchAndClickOnProductItem("Breakfast Pot");
+        String productItemText = homePage.getsearchProductText();
         System.out.println(productItemText);
-        String productItemPrice = homePage.getProductPrice();
+        String productItemPrice = homePage.getsearchProductPrice();
         System.out.println(productItemPrice);
-        homePage.getProductDetails();
+        homePage.getsearchProductDetails();
         Thread.sleep(5000);
-        homePage.addToBasketButton();
+        homePage.ClickOnAddField();
         Thread.sleep(5000);
 
-        cartPage.viewCart();
+       cartPage.clickOnCartIcon();
         String cartProductText = cartPage.getCartProductText();
         System.out.println(cartProductText);
         String cartProductPrice = cartPage.getCartProductPrice();
