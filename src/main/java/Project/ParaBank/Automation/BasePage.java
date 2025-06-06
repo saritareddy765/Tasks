@@ -1,8 +1,8 @@
-package Project.Day2.Automation;
+package Project.ParaBank.Automation;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
@@ -20,6 +20,10 @@ public class BasePage {
     @BeforeTest
     public void launchApplication(){
         driver.get("https://parabank.parasoft.com/parabank/index.htm");
+    }
+    @AfterSuite
+    public void tearDown(){
+        driver.quit();
     }
 
 }

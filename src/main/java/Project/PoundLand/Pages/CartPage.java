@@ -1,6 +1,6 @@
-package Project.Day1.Pages;
+package Project.PoundLand.Pages;
 
-import Project.Day1.Utilities.SeleniumActions;
+import Project.PoundLand.Utilities.SeleniumActions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,7 +21,7 @@ public class CartPage {
     @FindBy(xpath = "//p[@class='price-per-unit desktop']/preceding-sibling::span/span/span")
     private WebElement cartProductPriceText;
 
-   public void clickOnCartIcon() {
+    public void clickOnCartIcon() {
         seleniumActions.clickOnElement(cartIcon);
     }
 

@@ -1,9 +1,9 @@
-package Project.Day2;
+package Project.ParaBank;
 
-import Project.Day2.Automation.BasePage;
-import Project.Day2.Pages.LoginPage;
-import Project.Day2.Pages.OpenNewAccountPage;
-import Project.Day2.Pages.RegistrationPage;
+import Project.ParaBank.Automation.BasePage;
+import Project.ParaBank.Pages.LoginPage;
+import Project.ParaBank.Pages.OpenNewAccountPage;
+import Project.ParaBank.Pages.RegistrationPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -50,8 +50,8 @@ public class ParaBankTestCases extends BasePage {
         String customerNameWelcomeMessage = "Welcome sai saritha";
         loginPage.customerLoginDetails("sr","S@i12345");
         String welcomeWithCustomerNameMessage = loginPage.getCustomerNameWelcomeMessage();
-            System.out.println(welcomeWithCustomerNameMessage);
-            Assert.assertEquals(welcomeWithCustomerNameMessage,customerNameWelcomeMessage);
+        System.out.println(welcomeWithCustomerNameMessage);
+        Assert.assertEquals(welcomeWithCustomerNameMessage,customerNameWelcomeMessage);
 
         //customer open new account
         openNewAccountPage.clickOnOpenNewAccountLink();
@@ -67,7 +67,7 @@ public class ParaBankTestCases extends BasePage {
         System.out.println(openedAccountTitle);
        Assert.assertEquals(openedAccountTitle,openAccountHeading);*/
         //wishes message
-       String openedAccountMessage = openNewAccountPage.getOpenAccountResultMessage();
+        String openedAccountMessage = openNewAccountPage.getOpenAccountResultMessage();
         System.out.println(openedAccountMessage);
         Assert.assertEquals(openedAccountMessage,openAccountWishesMessage);
         //account number message

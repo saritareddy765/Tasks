@@ -1,7 +1,7 @@
-package Project.Day2.Pages;
+package Project.ParaBank.Pages;
 
-import Project.Day2.Utilities.SeleniumActions;
-import Project.Day2.Utilities.SeleniumWaits;
+import Project.ParaBank.Utilities.SeleniumActions;
+import Project.ParaBank.Utilities.SeleniumWaits;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,7 +17,7 @@ public class OpenNewAccountPage {
         PageFactory.initElements(driver,this);
     }
     //click on open new account
-   @FindBy(xpath = "//a[text()='Open New Account']")
+    @FindBy(xpath = "//a[text()='Open New Account']")
     private WebElement openNewAccountLink;
     //click on savings account and its id
     @FindBy(css = "select[id='type']")
@@ -53,7 +53,7 @@ public class OpenNewAccountPage {
     }
     public String getOpenAccountResultMessage(){
         seleniumWaits.waitForElementVisible(openAccountResultMessage);
-       return seleniumActions.getTextMessage(openAccountResultMessage);
+        return seleniumActions.getTextMessage(openAccountResultMessage);
     }
     public String getOpenAccountResultNewNumberMessage(){
         seleniumWaits.waitForElementVisible(openAccountResultNewAccountNumber);

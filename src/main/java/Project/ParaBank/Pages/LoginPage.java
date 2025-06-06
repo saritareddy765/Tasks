@@ -1,7 +1,7 @@
-package Project.Day2.Pages;
+package Project.ParaBank.Pages;
 
-import Project.Day2.Utilities.SeleniumActions;
-import Project.Day2.Utilities.SeleniumWaits;
+import Project.ParaBank.Utilities.SeleniumActions;
+import Project.ParaBank.Utilities.SeleniumWaits;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

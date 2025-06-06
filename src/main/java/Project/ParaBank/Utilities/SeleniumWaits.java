@@ -1,4 +1,4 @@
-package Project.Day2.Utilities;
+package Project.ParaBank.Utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

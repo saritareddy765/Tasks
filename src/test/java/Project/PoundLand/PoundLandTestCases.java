@@ -1,13 +1,13 @@
-package Project.Day1;
+package Project.PoundLand;
 
-import Project.Day1.Automation.BasePage;
-import Project.Day1.Pages.CartPage;
-import Project.Day1.Pages.HomePage;
+import Project.PoundLand.Automation.BasePage;
+import Project.PoundLand.Pages.CartPage;
+import Project.PoundLand.Pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class ProductsTest extends BasePage {
+public class PoundLandTestCases extends BasePage {
     public HomePage homePage;
     public CartPage cartPage;
     @BeforeClass
@@ -29,7 +29,7 @@ public class ProductsTest extends BasePage {
         homePage.ClickOnAddField();
         Thread.sleep(5000);
 
-       cartPage.clickOnCartIcon();
+        cartPage.clickOnCartIcon();
         String cartProductText = cartPage.getCartProductText();
         System.out.println(cartProductText);
         String cartProductPrice = cartPage.getCartProductPrice();
@@ -38,5 +38,6 @@ public class ProductsTest extends BasePage {
         Assert.assertEquals(productItemPrice,cartProductPrice);
 
     }
+
 
 }

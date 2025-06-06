@@ -1,7 +1,7 @@
-package Project.Day1.Pages;
+package Project.PoundLand.Pages;
 
-import Project.Day1.Utilities.SeleniumActions;
-import Project.Day1.Utilities.SeleniumWaits;
+import Project.PoundLand.Utilities.SeleniumActions;
+import Project.PoundLand.Utilities.SeleniumWaits;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
 
-     static final String browsingTheProductItem = "Waggle Honey, 250g";
+    static final String browsingTheProductItem = "Waggle Honey, 250g";
     private static final String browsingTheProductId = "209847";
 
     SeleniumActions seleniumActions;

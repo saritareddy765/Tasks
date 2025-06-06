@@ -1,4 +1,4 @@
-package Project.Day1.Automation;
+package Project.PoundLand.Automation;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
